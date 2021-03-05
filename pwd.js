@@ -1,10 +1,8 @@
-let pwdVar = (data) => {
-  const cmd = data.toString().trim();
-
+let pwdVar = () => {
   let retVal = process.cwd();
 
   process.stdout.write(retVal);
-  process.stdout.write('\nprompt > ');
+  process.stdout.write("\nprompt > ");
 };
 
-module.exports = (pwdVar);
+module.exports = pwdVar;
