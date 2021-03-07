@@ -1,12 +1,8 @@
-const request = require('request');
+const request = require("request");
 
-let catCmd = (url) => {
+let catCmd = (url, done) => {
   request(url, function (error, response, body) {
-    process.stdout.write(body);
-    process.stdout.write('prompt > ');
-    // request
-    // .get(url)
-    // .on('response', function())
+    done(body);
   });
 };
 

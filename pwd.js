@@ -1,8 +1,7 @@
-let pwdVar = () => {
+let pwdVar = (done) => {
   let retVal = process.cwd();
 
-  process.stdout.write(retVal);
-  process.stdout.write("\nprompt > ");
+  done(retVal);
 };
 
 module.exports = pwdVar;

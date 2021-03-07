@@ -1,12 +1,11 @@
 const fs = require("fs");
 
-let catVar = (file) => {
+let catVar = (file, done) => {
   fs.readFile(file, (err, data) => {
     if (err) {
       throw err;
     } else {
-      process.stdout.write(data);
-      process.stdout.write("prompt > ");
+      done(data);
     }
   });
 };
